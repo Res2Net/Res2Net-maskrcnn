@@ -12,6 +12,7 @@ More detail can be found on [ "Res2Net: A New Multi-scale Backbone Architecture"
 ### Results on Instance segmentation and Object detection using MaskRCNN.
 
 **Performance on Instance segmentation:**
+
 | Backbone     | Setting      | AP      | AP50    | AP75     | APs       |APm        |    APl    |
 |--------------|--------------|---------|---------|----------|-----------|-----------|-----------|
 | ResNet-50    |  64w         | 33.9    | 55.2    | 36.0     | 14.8      | 36.0      | 50.9      |
@@ -21,7 +22,9 @@ More detail can be found on [ "Res2Net: A New Multi-scale Backbone Architecture"
 | Res2Net-50   |  14w×8s      | 35.3    | 57.0    | 37.5     | 15.6      | 37.5      | 53.4      |
 | ResNet-101   |  64w         | 35.5    | 57.0    | 37.9     | 16.0      | 38.2      | 52.9      |
 | Res2Net-101  |  26w×4s      | 37.1    | 59.4    | 39.4     | 16.6      | 40.0      | 55.6      |
+
 **Performance on Object detection:**
+
 | Backbone     | Setting      | AP      | AP50    | AP75     | APs       |APm        |    APl    |
 |--------------|--------------|---------|---------|----------|-----------|-----------|-----------|
 | ResNet-50    |  64w         | 37.5    | 58.4    | 40.3     | 20.6      | 40.1      | 49.7      |
