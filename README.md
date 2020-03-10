@@ -1,7 +1,9 @@
 # Res2Net for Instance segmentation and Object detection using MaskRCNN
-
+**Since the MaskRCNN-benchmark of facebook is deprecated, we suggest to use our mmdetection based res2net for object detection and instance segmentation to get the SOTA performance on both two tasks.** https://github.com/Res2Net/mmdetection 
+## Update
+- 2020.3.10 The mmdetection based implementation of object detection and instance segmentation using Res2Net_v1b has the SOTA performance. We have released our code on: https://github.com/Res2Net/mmdetection. Our Res2Net_v1b achieves a considerable performance gain on mmdetection compared with existing backbone models.
 ## Introduction
-This repo uses *MaskRCNN* as the baseline method for Instance segmentation and Object detection. We use the [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark) as the baseline. (TODO: merge this repo into the maskrcnn-benchmark.)
+This repo uses *MaskRCNN* as the baseline method for Instance segmentation and Object detection. We use the [maskrcnn-benchmark](https://github.com/facebookresearch/maskrcnn-benchmark) as the baseline. 
 
 [Res2Net](https://github.com/gasvn/Res2Net) is a powerful backbone architecture that can be easily implemented into state-of-the-art models by replacing the bottleneck with Res2Net module.
 More detail can be found on [ "Res2Net: A New Multi-scale Backbone Architecture"](https://arxiv.org/pdf/1904.01169.pdf) and our [project page](https://mmcheng.net/res2net) .
