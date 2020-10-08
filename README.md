@@ -110,7 +110,7 @@ you'll also need to change the learning rate, the number of iterations and the l
 
 Here is an example for Mask R-CNN Res2Net-50 FPN with the 2x schedule:
 ```bash
-python tools/train_net.py --config-file "configs/pytorch_mask_rcnn_R2_50_s4_FPN_2x.ymal" SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025 SOLVER.MAX_ITER 720000 SOLVER.STEPS "(480000, 640000)" TEST.IMS_PER_BATCH 1
+python tools/train_net.py --config-file "configs/pytorch_mask_rcnn_R2_50_s4_FPN_2x.yaml" SOLVER.IMS_PER_BATCH 2 SOLVER.BASE_LR 0.0025 SOLVER.MAX_ITER 720000 SOLVER.STEPS "(480000, 640000)" TEST.IMS_PER_BATCH 1
 ```
 This follows the [scheduling rules from Detectron.](https://github.com/facebookresearch/Detectron/blob/master/configs/getting_started/tutorial_1gpu_e2e_faster_rcnn_R-50-FPN.yaml#L14-L30)
 Note that we have multiplied the number of iterations by 8x (as well as the learning rate schedules),
@@ -128,7 +128,7 @@ process will only use a single GPU.
 
 ```bash
 export NGPUS=8
-python -m torch.distributed.launch --nproc_per_node=$NGPUS /path_to_maskrcnn_benchmark/tools/train_net.py --config-file "configs/pytorch_mask_rcnn_R2_50_s4_FPN_2x.ymal"
+python -m torch.distributed.launch --nproc_per_node=$NGPUS /path_to_maskrcnn_benchmark/tools/train_net.py --config-file "configs/pytorch_mask_rcnn_R2_50_s4_FPN_2x.yaml"
 ```
 
 
@@ -139,7 +139,7 @@ Here is how we would do it. Run this from the `demo` folder:
 from maskrcnn_benchmark.config import cfg
 from predictor import COCODemo
 
-config_file = "../configs/pytorch_mask_rcnn_R2_50_s4_FPN_2x.ymal"
+config_file = "../configs/pytorch_mask_rcnn_R2_50_s4_FPN_2x.yaml"
 
 # update the config options with the config file
 cfg.merge_from_file(config_file)
